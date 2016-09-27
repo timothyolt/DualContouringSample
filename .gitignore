@@ -212,11 +212,6 @@ pip-log.txt
 #Translations
 *.mo
 
-glm-0.9.8.0/
-glew-2.0.0/
-lib/
-SDL2-2.0.4
-
 #Mr Developer
 .mr.developer.cfg
 DualContourSample.VC.opendb
