@@ -1,10 +1,12 @@
+#define _SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS
+
 #include <stdio.h>
 #include <stdlib.h>
 
-#include <GL\glew.h>
+#include <GL/glew.h>
 #include <SDL.h>
 #include <SDL_opengl.h>
-#include <glm\glm.hpp>
+#include <glm/glm.hpp>
 
 #include "glsl_program.h"
 #include "mesh.h"
@@ -16,8 +18,8 @@ void HandleMouseMove(const SDL_MouseMotionEvent& e, float& rotateXAxis, float& r
 {
 	if (e.state & SDL_BUTTON_LMASK)
 	{
-		rotateXAxis += (float)e.yrel * 0.5f;
-		rotateYAxis += (float)e.xrel * 0.5f;
+		rotateXAxis += float(e.yrel) * 0.5f;
+		rotateYAxis += float(e.xrel) * 0.5f;
 
 		rotateXAxis = glm::min(80.f, rotateXAxis);
 		rotateXAxis = glm::max(-80.f, rotateXAxis);

@@ -1,3 +1,4 @@
+#define _SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS
 #include "glsl_program.h"
 #include <fstream>
 #include <sstream>
